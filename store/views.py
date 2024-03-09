@@ -2,7 +2,7 @@
 from django.shortcuts import render, get_object_or_404
 from store.models import Category, Product
 from django.db.models import Prefetch
-
+from django.core.paginator import Paginator
 # Create your views here.
 
 
@@ -35,8 +35,11 @@ def list_all(request):
     """
     # todo: add pagination
     products = Product.objects.filter(is_available=True)
-    context = {"products": products}
-    return render(request, " stores/list-all.html", context=context)
+    paginator = Paginator(products,8)
+    page_number = request.GET.get("page")
+    page = paginator.get_page(page_number)
+    context = {"products": page}
+    return render(request, "store/list-all.html", context=context)
 
 
 def show_product(request, slug):

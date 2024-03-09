@@ -1,47 +1,64 @@
 {% extends "../base.html" %}
 {% block title %}Categories{% endblock %}
 {% block sidebar %}
-            <h2 class="text-center text-3xl font-bebas font-black py-8">Categories</h2>
-            <div class="flex flex-col items-center">
-                {% for category in categories %}
-                <a class="px-4 py-2 my-2 hover:text-amber-800 font-urbanistA" href="{{category.get_absolute_url}}">{{category.name}}</a>
-                {% endfor %}
-             
-            </div>
+<h2 class="text-center text-3xl font-bebas font-black py-8">Categories</h2>
+<div class="flex flex-col items-center">
+    {% for category in categories %}
+    <a class="px-4 py-2 my-2 hover:text-amber-800 font-urbanistA"
+        href="{{category.get_absolute_url}}">{{category.name}}</a>
+    {% endfor %}
+
+</div>
 {% endblock sidebar %}
 {% block content %}
 <h2 class="text-5xl my-4 ml-4 font-bebas">{{category.name}}</h2>
-            <!-- content starts here -->
-            <div class="flex flex-wrap justify-start mx-auto">
-                {% for product in products %}
-                <!--card start-->
-                <a href="{{product.get_absolute_url}}">
-                <div
-                    class="bg-white border-2 border-black my-2 mx-4 hover:shadow-3xl hover:-translate-x-2 ease-in-out duration-200 lg:w-card lg:h-card">
-                    <div class="overflow-hidden border-b-2 border-black">
-                        <img src="https://images.pexels.com/photos/9977648/pexels-photo-9977648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class=" h-[24rem] w-full hover:scale-110 ease-in duration-300" alt="image" />
-                    </div>
-                    <div class="p-4 flex flex-col justify-between">
-                        <h2 class="text-3xl font-black">{{product.name}}</h2>
-                        <h3 class="text-xl font-light">{{product.owner}}</h3>
-                        <div class="flex items-end">
-                            <!-- <?xml version="1.0" encoding="utf-8"?> -->
-                            <svg width="32px" height="32px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M23.632 9.201a.628.628 0 0 1-.22.678l-5.726 4.96 1.727 7.394a.606.606 0 0 1-.935.676l-6.503-3.953-6.503 3.953a.713.713 0 0 1-.374.112.57.57 0 0 1-.34-.109.629.629 0 0 1-.222-.679l1.729-7.393L.539 9.879A.607.607 0 0 1 .897 8.78l7.536-.635 2.965-7.083a.62.62 0 0 1 1.155.001l2.965 7.082 7.536.635a.63.63 0 0 1 .578.42z" />
-                                <path fill="none" d="M0 0h24v24H0z" />
-                            </svg>
-                            <span class="px-2">4.5</span><span>(18)</span>
-                        </div>
-                        <div class="w-full h-0.5 my-4 bg-black"></div>
-                        <div class="text-2xl font-semibold">${{product.price}}</div>
-                    </div>
+<!-- content starts here -->
+<div class="flex flex-wrap justify-start mx-auto">
+    {% for product in products %}
+    <!--card start-->
+    <a href="{{product.get_absolute_url}}">
+        <div
+            class="bg-white border-2 border-black my-2 mx-4 hover:shadow-3xl hover:-translate-x-2 ease-in-out duration-200 lg:w-card lg:h-card">
+            <div class="overflow-hidden border-b-2 border-black">
+                <img src="https://images.pexels.com/photos/9977648/pexels-photo-9977648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    class=" h-[24rem] w-full hover:scale-110 ease-in duration-300" alt="image" />
+            </div>
+            <div class="p-4 flex flex-col justify-between">
+                <h2 class="text-3xl font-black">{{product.name}}</h2>
+                <h3 class="text-xl font-light">{{product.owner}}</h3>
+                <div class="flex items-end">
+                    <!-- <?xml version="1.0" encoding="utf-8"?> -->
+                    <svg width="32px" height="32px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.632 9.201a.628.628 0 0 1-.22.678l-5.726 4.96 1.727 7.394a.606.606 0 0 1-.935.676l-6.503-3.953-6.503 3.953a.713.713 0 0 1-.374.112.57.57 0 0 1-.34-.109.629.629 0 0 1-.222-.679l1.729-7.393L.539 9.879A.607.607 0 0 1 .897 8.78l7.536-.635 2.965-7.083a.62.62 0 0 1 1.155.001l2.965 7.082 7.536.635a.63.63 0 0 1 .578.42z" />
+                        <path fill="none" d="M0 0h24v24H0z" />
+                    </svg>
+                    <span class="px-2">4.5</span><span>(18)</span>
                 </div>
-            </a>
-                <!--card end-->
-                {% endfor %}
-
+                <div class="w-full h-0.5 my-4 bg-black"></div>
+                <div class="text-2xl font-semibold">${{product.price}}</div>
             </div>
         </div>
+    </a>
+    <!--card end-->
+    {% endfor %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+</div>
 {%endblock content %}

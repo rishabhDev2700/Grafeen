@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "crispy_forms",
     "crispy_tailwind",
+    "compressor",
     "taggit",
     "account",
     "store",
@@ -84,8 +85,12 @@ TEMPLATES = [
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "compressor.finders.CompressorFinder",
 )
-
+COMPRESS_ROOT = BASE_DIR / 'staticfiles/css'
+ 
+COMPRESS_ENABLED = True
+ 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 
 CRISPY_TEMPLATE_PACK = "tailwind"
