@@ -1,0 +1,222 @@
+[
+  {
+    "model": "account.User",
+    "pk": 1,
+    "fields": {
+      "full_name": "Test User 1",
+      "email": "testuser1@example.com",
+      "password": "pbkdf2_sha256$720000$avfz2or1NMo8N2a5stLmKh$UyybDCovIJCiU6/q+02Xgq1fCP2uuc86RvhW18WmaWA=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 2,
+    "fields": {
+      "full_name": "Test User 2",
+      "email": "testuser2@example.com",
+      "password": "pbkdf2_sha256$720000$a61bzBZvq3dme6TjaZMzNA$iFfuSQ0GhslSIzL9p0GEd5pEGhxw02GEUcn9y3c1Rjg=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 3,
+    "fields": {
+      "full_name": "Test User 3",
+      "email": "testuser3@example.com",
+      "password": "pbkdf2_sha256$720000$ZfGwTTpAiyxEjigY99hw2N$HbbldAwbilZqgehKvQODBwq97aCiJt6YwwSRZUIU+LY=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 4,
+    "fields": {
+      "full_name": "Test User 4",
+      "email": "testuser4@example.com",
+      "password": "pbkdf2_sha256$720000$Cswtdp53bXkZXTOmuCj3LE$ENpiMnMcc40Pw85iYAxk8gwbDEbe2p5DDiTlAkuccPM=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 5,
+    "fields": {
+      "full_name": "Test User 5",
+      "email": "testuser5@example.com",
+      "password": "pbkdf2_sha256$720000$RYZLET1IBxZdKqHhc1zgAA$m9mxYUZ9Q+bZv/SWGKJIyp2ICKrnfnR1/IqDVNp2LPs=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 6,
+    "fields": {
+      "full_name": "Test User 6",
+      "email": "testuser6@example.com",
+      "password": "pbkdf2_sha256$720000$pSCuosPmoweTYU1QpbkEIR$YcNQeSvnWRvz55IZzs2RCoNsG6rqj0uLGnPbGyWr2xE=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 7,
+    "fields": {
+      "full_name": "Test User 7",
+      "email": "testuser7@example.com",
+      "password": "pbkdf2_sha256$720000$4eR8stVHRTj7FCFuXCRBbk$62nIgaRlDYuALBs/zdyQzpstTQkqmhgBJReUeEupeIk=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 8,
+    "fields": {
+      "full_name": "Test User 8",
+      "email": "testuser8@example.com",
+      "password": "pbkdf2_sha256$720000$YTiaFPcYFqL5WJx7y0DbMd$Itd+Vz6x0+2UFMiEKN8rqpJXSI0Js8Opfs5KabjVE4s=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 9,
+    "fields": {
+      "full_name": "Test User 9",
+      "email": "testuser9@example.com",
+      "password": "pbkdf2_sha256$720000$cjF1KBuE4H7i3MkSwGBVxh$17GoxsHZJ7JJ4AGm+VyEdB/t5ijkBUqOIHLAzecOwr8=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 10,
+    "fields": {
+      "full_name": "Test User 10",
+      "email": "testuser10@example.com",
+      "password": "pbkdf2_sha256$720000$uowhSsKoHQjKA5WJDQHJx4$TnmVTD31VFP03J7cAm9p16wmrfeTIMPO+Fqkh1Mdzgs=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 11,
+    "fields": {
+      "full_name": "Test User 11",
+      "email": "testuser11@example.com",
+      "password": "pbkdf2_sha256$720000$jcvSURVUI5kWqsmM9pNzgd$ipY+BrsoyDnpwwI9RXLtH3kmu2aqSS7vMzcgGS3Jgwo=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 12,
+    "fields": {
+      "full_name": "Test User 12",
+      "email": "testuser12@example.com",
+      "password": "pbkdf2_sha256$720000$wi1G1P9HO75XhdtnMxLpDL$9lVg7ShCbUfK4ySSaRMO1CT9Nm9Di0YvOFrBrLYPORk=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 13,
+    "fields": {
+      "full_name": "Test User 13",
+      "email": "testuser13@example.com",
+      "password": "pbkdf2_sha256$720000$PbqCdZaff0HUV7Dzh2SG0s$tXKTJ8XW9mbeuyTwanmK9yukrlIWWX0tnkCjRao372E=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 14,
+    "fields": {
+      "full_name": "Test User 14",
+      "email": "testuser14@example.com",
+      "password": "pbkdf2_sha256$720000$5mhr60JEnNvleOT8fCItRj$4aDC25CdK0hgvQkSHvNes5+QkCGyY2L5ks+fu//elgI=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 15,
+    "fields": {
+      "full_name": "Test User 15",
+      "email": "testuser15@example.com",
+      "password": "pbkdf2_sha256$720000$hIhuAHuIc3tLbJWIwRl30h$MLcNkhpyCsa95+IoG5VMwk2/IGkyngi3xUWehYY2PDM=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 16,
+    "fields": {
+      "full_name": "Test User 16",
+      "email": "testuser16@example.com",
+      "password": "pbkdf2_sha256$720000$B3Wpl1bgYRlIO5TAM4MYtS$040teCHPBF/io/rB1OBZFaRrHexpT8S0b8GNvIgABTQ=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 17,
+    "fields": {
+      "full_name": "Test User 17",
+      "email": "testuser17@example.com",
+      "password": "pbkdf2_sha256$720000$2GOIOhH3RMB1xcwnuEcRjZ$nlVscOyET/6L9pIAyUIP3IDP/EqTen/ykr3onWjB1+M=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 18,
+    "fields": {
+      "full_name": "Test User 18",
+      "email": "testuser18@example.com",
+      "password": "pbkdf2_sha256$720000$aOO9699Em3Sdtaew0OwcN9$w+6tLynvEJOrsHm0Hjt0w451YkqIAltb10kDcWz8QVA=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 19,
+    "fields": {
+      "full_name": "Test User 19",
+      "email": "testuser19@example.com",
+      "password": "pbkdf2_sha256$720000$PbVSmUHGSaLaltJlP0PkQ0$VSQnreX5Qi7unltf0A927Crv8wqr3UfLmnrlY+Bw9qo=",
+      "is_seller": false,
+      "is_verified": true
+    }
+  },
+  {
+    "model": "account.User",
+    "pk": 20,
+    "fields": {
+      "full_name": "Test User 20",
+      "email": "testuser20@example.com",
+      "password": "pbkdf2_sha256$720000$WisOHjW1dssiMtBhjn1GF7$qkQZXDKi8OYRFZb8EO6VJTlPK4xwsJ2I6cIFmGddDb4=",
+      "is_seller": true,
+      "is_verified": true
+    }
+  }
+]

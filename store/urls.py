@@ -2,6 +2,7 @@
 from django.urls import path
 from store.views import (
     homepage,
+    landing,
     explore,
     list_categories,
     list_all,
@@ -13,8 +14,9 @@ from store.views import (
 
 app_name = "store"
 urlpatterns = [
-    path("", homepage, name="home"),
-    path("explore/",explore,name="explore"),
+    path("", landing, name="landing"),
+    path("home/", homepage, name="home"),
+    path("explore/", explore, name="explore"),
     path("categories/", list_categories, name="categories"),
     path("category/<slug:slug>/", show_category, name="show-category"),
     path("all/", list_all, name="list-all"),

@@ -1,20 +1,19 @@
-{% extends '../base.html'%}
-{% block title %}Graphene {%endblock title%}
+{% extends "../base.html" %}
+{% block title %}Categories{% endblock %}
 {% block sidebar %}
-            <h2 class="text-center text-3xl font-black py-8">Categories</h2>
+            <h2 class="text-center text-3xl font-bebas font-black py-8">Categories</h2>
             <div class="flex flex-col items-center">
                 {% for category in categories %}
-                <a class="px-4 py-2 my-2 hover:text-amber-800" href="{{category.get_absolute_url}}">{{category.name}}</a>
+                <a class="px-4 py-2 my-2 hover:text-amber-800 font-urbanistA" href="{{category.get_absolute_url}}">{{category.name}}</a>
                 {% endfor %}
              
             </div>
 {% endblock sidebar %}
 {% block content %}
-{% for category in categories %}
-            <h2 class="text-5xl my-4 ml-4 font-bebas">{{category.name}}</h2>
+<h2 class="text-5xl my-4 ml-4 font-bebas">{{category.name}}</h2>
             <!-- content starts here -->
             <div class="flex flex-wrap justify-start mx-auto">
-                {% for product in category.limited_products %}
+                {% for product in products %}
                 <!--card start-->
                 <a href="{{product.get_absolute_url}}">
                 <div
@@ -42,19 +41,7 @@
             </a>
                 <!--card end-->
                 {% endfor %}
-            </div>
-            <div>
-        {% endfor %}
 
             </div>
-            <!-- Separator -->
-            <div class="bg-black h-0.5 mb-4"></div>
-            <a class="bg-gradient-to-br text-xl font-urbanist from-red-500 to-purple-700 py-3 px-2 m-4 hover:from-red-400 hover:to-purple-500 ease-linear duration-300 border-2 border-black hover:shadow-button hover:-translate-x-1 hover:translate-y-2"
-                href="#">Explore more</a>
-            <div class="bg-black h-0.5 mt-4"></div>
-            <!-- content ends -->
-    </div>
-
-
-{% endblock %}
-</html>
+        </div>
+{%endblock content %}

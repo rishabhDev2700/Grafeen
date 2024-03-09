@@ -1,0 +1,26 @@
+{% extends "../base.html" %}
+{% block title %}Categories{% endblock %}
+{% block content %}
+
+ <div class="flex flex-wrap justify-start mx-auto">
+                {% for category in categories %}
+                <!--card start-->
+              <a href="{{category.get_absolute_url}}">
+                  <div
+                    class="bg-white border-2 border-black my-2 mx-4 hover:shadow-3xl hover:-translate-x-2 ease-in-out duration-200 lg:w-card lg:h-card">
+                    <div class="overflow-hidden border-b-2 border-black">
+                        <img src="{{category.cover.url}}"
+                            class=" h-[24rem] w-full hover:scale-110 ease-in duration-300" alt="image" />
+                    </div>
+                    <div class="p-4 flex flex-col justify-between">
+                        <h2 class="text-3xl font-black">{{category.name}}</h2>
+                        <h3 class="text-xl font-light">{{category.description}}</h3>
+                       
+                    </div>
+                </div>
+              </a>
+                <!--card end-->
+                {% endfor %}
+
+            </div>
+{%endblock%}

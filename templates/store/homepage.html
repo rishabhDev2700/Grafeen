@@ -1,0 +1,64 @@
+{% extends '../base.html' %}
+{% block title %}
+    Graphene
+{% endblock title %}
+{% block sidebar %}
+{% endblock sidebar %}
+{% block content %}
+    <div class=" flex flex-col items-center lg:flex-row lg:flex-wrap">
+        <!-- Product Card -->
+        <a href="#">
+            <div class="border-2 border-black font-urbanist bg-white m-2 p-0 lg:w-96">
+                <div class="cover-img w-full h-96 m-0">
+                    <img src="https://images.pexels.com/photos/19621565/pexels-photo-19621565/free-photo-of-a-tree-with-a-bench-and-a-path-leading-to-it.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                         class="object-cover m-0 h-full w-full"
+                         alt="" />
+                </div>
+                <div class="details p-2 border-2 m-0 ">
+                    <h2 class="font-bebas text-3xl">Product Title</h2>
+                    <p div class="description py-2 h-28 overflow-hidden">{% lorem 1 b %}</p>
+                </div>
+                <div class="w-full flex justify-between  border-t-2 border-black">
+                    <div class="bg-pink-700 w-1/2">
+                        <div class="font-bold">Price</div>
+                        <div class="">999</div>
+                    </div>
+                    <div class="bg-blue-500">
+                        <div class="font-bold">Artist</div>
+                        <div class="">Mr.Brush</div>
+                    </div>  
+                    <a class="w-1/3 flex justify-center bg-green-500 hover:bg-green-600 duration-200 ease-linear text-white font-bebas text-2xl p-2"
+                       href="">Buy Now</a>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- End of product card-->
+    <div class="border-2 border-black bg-white m-2 p-0 lg:w-96">
+        <div class="cover-img w-full h-96 border-2 border-black m-0">
+            <img src="https://images.pexels.com/photos/17483848/pexels-photo-17483848/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-depicts-a-look-inside-how-ai-microchips-are-designed-it-was-created-by-champ-panupong-techawongthawon-as-part-of-the-v.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                 class="object-cover m-0 h-full w-full"
+                 alt="" />
+        </div>
+        <div class="details p-2 border-4 m-0 border-black">
+            <h2 class="text-2xl font-serif">Product Title</h2>
+            <p div class="description py-2 h-28 overflow-hidden">{% lorem 1 b %}</p>
+        </div>
+        <div class="flex border-x-4 border-b-4 border-black text-center">
+            <div class="w-1/3 p-2">
+                <div>Price</div>
+                <div>$XXX</div>
+            </div>
+            <div class="w-1/3 p-2">
+                <div>Artist</div>
+                <div>Mr.Color</div>
+            </div>
+            <div class="w-1/3 p-2">
+                <div>Date</div>
+                <div>00/00/0000</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of card container-->
+{% endblock content %}

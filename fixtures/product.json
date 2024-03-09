@@ -1,0 +1,702 @@
+[
+    {
+        "model": "store.Product",
+        "pk": 1,
+        "fields": {
+            "owner": 2,
+            "name": "Test Product 1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-1",
+            "category": 1,
+            "price": 20,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 2,
+        "fields": {
+            "owner": 4,
+            "name": "Test Product 2",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-2",
+            "category": 2,
+            "price": 25,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 3,
+        "fields": {
+            "owner": 6,
+            "name": "Test Product 3",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-3",
+            "category": 3,
+            "price": 30,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 4,
+        "fields": {
+            "owner": 8,
+            "name": "Test Product 4",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-4",
+            "category": 4,
+            "price": 35,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 5,
+        "fields": {
+            "owner": 10,
+            "name": "Test Product 5",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-5",
+            "category": 5,
+            "price": 40,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 6,
+        "fields": {
+            "owner": 12,
+            "name": "Test Product 6",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-6",
+            "category": 6,
+            "price": 45,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 7,
+        "fields": {
+            "owner": 14,
+            "name": "Test Product 7",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-7",
+            "category": 7,
+            "price": 50,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 8,
+        "fields": {
+            "owner": 16,
+            "name": "Test Product 8",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-8",
+            "category": 8,
+            "price": 55,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 9,
+        "fields": {
+            "owner": 18,
+            "name": "Test Product 9",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-9",
+            "category": 9,
+            "price": 60,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 10,
+        "fields": {
+            "owner": 20,
+            "name": "Test Product 10",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-10",
+            "category": 10,
+            "price": 65,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 11,
+        "fields": {
+            "owner": 2,
+            "name": "Test Product 11",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-11",
+            "category": 1,
+            "price": 70,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 12,
+        "fields": {
+            "owner": 4,
+            "name": "Test Product 12",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-12",
+            "category": 2,
+            "price": 75,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 13,
+        "fields": {
+            "owner": 6,
+            "name": "Test Product 13",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-13",
+            "category": 3,
+            "price": 80,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 14,
+        "fields": {
+            "owner": 8,
+            "name": "Test Product 14",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-14",
+            "category": 4,
+            "price": 85,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 15,
+        "fields": {
+            "owner": 10,
+            "name": "Test Product 15",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-15",
+            "category": 5,
+            "price": 90,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 16,
+        "fields": {
+            "owner": 12,
+            "name": "Test Product 16",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-16",
+            "category": 6,
+            "price": 95,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 17,
+        "fields": {
+            "owner": 14,
+            "name": "Test Product 17",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-17",
+            "category": 7,
+            "price": 100,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 18,
+        "fields": {
+            "owner": 16,
+            "name": "Test Product 18",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-18",
+            "category": 8,
+            "price": 105,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 19,
+        "fields": {
+            "owner": 18,
+            "name": "Test Product 19",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-19",
+            "category": 9,
+            "price": 110,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 20,
+        "fields": {
+            "owner": 20,
+            "name": "Test Product 20",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-20",
+            "category": 1,
+            "price": 115,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 21,
+        "fields": {
+            "owner": 2,
+            "name": "Test Product 21",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-21",
+            "category": 1,
+            "price": 120,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 22,
+        "fields": {
+            "owner": 4,
+            "name": "Test Product 22",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-22",
+            "category": 2,
+            "price": 125,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 23,
+        "fields": {
+            "owner": 6,
+            "name": "Test Product 23",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-23",
+            "category": 3,
+            "price": 130,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 24,
+        "fields": {
+            "owner": 8,
+            "name": "Test Product 24",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-24",
+            "category": 4,
+            "price": 135,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 25,
+        "fields": {
+            "owner": 10,
+            "name": "Test Product 25",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-25",
+            "category": 5,
+            "price": 140,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 26,
+        "fields": {
+            "owner": 12,
+            "name": "Test Product 26",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-26",
+            "category": 6,
+            "price": 145,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 27,
+        "fields": {
+            "owner": 14,
+            "name": "Test Product 27",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-27",
+            "category": 7,
+            "price": 150,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 28,
+        "fields": {
+            "owner": 16,
+            "name": "Test Product 28",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-28",
+            "category": 8,
+            "price": 155,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 29,
+        "fields": {
+            "owner": 18,
+            "name": "Test Product 29",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-29",
+            "category": 9,
+            "price": 160,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 30,
+        "fields": {
+            "owner": 20,
+            "name": "Test Product 30",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-30",
+            "category": 2,
+            "price": 165,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 31,
+        "fields": {
+            "owner": 2,
+            "name": "Test Product 31",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-31",
+            "category": 1,
+            "price": 170,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 32,
+        "fields": {
+            "owner": 4,
+            "name": "Test Product 32",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-32",
+            "category": 2,
+            "price": 175,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 33,
+        "fields": {
+            "owner": 6,
+            "name": "Test Product 33",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-33",
+            "category": 3,
+            "price": 180,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 34,
+        "fields": {
+            "owner": 8,
+            "name": "Test Product 34",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-34",
+            "category": 4,
+            "price": 185,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 35,
+        "fields": {
+            "owner": 10,
+            "name": "Test Product 35",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-35",
+            "category": 5,
+            "price": 190,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 36,
+        "fields": {
+            "owner": 12,
+            "name": "Test Product 36",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-36",
+            "category": 6,
+            "price": 195,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 37,
+        "fields": {
+            "owner": 14,
+            "name": "Test Product 37",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-37",
+            "category": 7,
+            "price": 200,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 38,
+        "fields": {
+            "owner": 16,
+            "name": "Test Product 38",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-38",
+            "category": 8,
+            "price": 205,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 39,
+        "fields": {
+            "owner": 18,
+            "name": "Test Product 39",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-39",
+            "category": 9,
+            "price": 210,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 40,
+        "fields": {
+            "owner": 20,
+            "name": "Test Product 40",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-40",
+            "category": 4,
+            "price": 215,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 41,
+        "fields": {
+            "owner": 2,
+            "name": "Test Product 41",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-41",
+            "category": 4,
+            "price": 220,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 42,
+        "fields": {
+            "owner": 4,
+            "name": "Test Product 42",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-42",
+            "category": 4,
+            "price": 225,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 43,
+        "fields": {
+            "owner": 6,
+            "name": "Test Product 43",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-43",
+            "category": 4,
+            "price": 230,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 44,
+        "fields": {
+            "owner": 8,
+            "name": "Test Product 44",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-44",
+            "category": 4,
+            "price": 235,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 45,
+        "fields": {
+            "owner": 10,
+            "name": "Test Product 45",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-45",
+            "category": 4,
+            "price": 240,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 46,
+        "fields": {
+            "owner": 12,
+            "name": "Test Product 46",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "test-product-46",
+            "category": 4,
+            "price": 245,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 47,
+        "fields": {
+            "owner": 14,
+            "name": "Test Product 47",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "test-product-47",
+            "category": 4,
+            "price": 250,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 48,
+        "fields": {
+            "owner": 16,
+            "name": "Test Product 48",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "test-product-48",
+            "category": 4,
+            "price": 255,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 49,
+        "fields": {
+            "owner": 18,
+            "name": "Test Product 49",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "test-product-49",
+            "category": 10,
+            "price": 260,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 50,
+        "fields": {
+            "owner": 20,
+            "name": "Test Product 50",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "test-product-50",
+            "category": 10,
+            "price": 265,
+            "is_available": true,
+            "date_added":"2024-2-23"
+        }
+    }
+]

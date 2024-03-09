@@ -1,0 +1,102 @@
+[
+    {
+        "model": "store.Category",
+        "pk": 1,
+        "fields": {
+            "cover": "covers/category1.jpg",
+            "name": "Category 1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "category-1"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 2,
+        "fields": {
+            "cover": "covers/category2.jpg",
+            "name": "Category 2",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "category-2"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 3,
+        "fields": {
+            "cover": "covers/category3.jpg",
+            "name": "Category 3",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "category-3"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 4,
+        "fields": {
+            "cover": "covers/category4.jpg",
+            "name": "Category 4",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "category-4"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 5,
+        "fields": {
+            "cover": "covers/category5.jpg",
+            "name": "Category 5",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "category-5"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 6,
+        "fields": {
+            "cover": "covers/category6.jpg",
+            "name": "Category 6",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "slug": "category-6"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 7,
+        "fields": {
+            "cover": "covers/category7.jpg",
+            "name": "Category 7",
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "slug": "category-7"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 8,
+        "fields": {
+            "cover": "covers/category8.jpg",
+            "name": "Category 8",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "slug": "category-8"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 9,
+        "fields": {
+            "cover": "covers/category9.jpg",
+            "name": "Category 9",
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "slug": "category-9"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 10,
+        "fields": {
+            "cover": "covers/category10.jpg",
+            "name": "Category 10",
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "slug": "category-10"
+        }
+    }
+]

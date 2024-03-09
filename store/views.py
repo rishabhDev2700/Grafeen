@@ -1,14 +1,11 @@
 """This file contains all view functions related to store"""
 from django.shortcuts import render, get_object_or_404
 from store.models import Category, Product
+from django.db.models import Prefetch
 
 # Create your views here.
 
-def explore(request):
-    return render(request,"store/explore.html")
 
-
-# Create your views here.
 def homepage(request):
     """
     Home page of the website
@@ -17,18 +14,19 @@ def homepage(request):
     context = {"new_arrivals": new_arrivals}
     return render(request, "store/homepage.html", context=context)
 
+
 def explore(request):
     """
     Explore page of the website
     """
-    categories = Category.objects.prefetch_related("product").all()
-    context ={}
-    # for category in categories:
-    #     context['categories'] = 
-    # print(products.explain())
-    return render(request,"store/explore.html",context=context)
-
-
+    categories = Category.objects.prefetch_related(
+        Prefetch(
+            "product_set",
+            queryset=Product.objects.filter(is_available=True)[:4],
+            to_attr="limited_products",
+        )
+    ).all()
+    return render(request, "store/explore.html", context={"categories": categories})
 
 
 def list_all(request):
@@ -59,8 +57,16 @@ def list_categories(request):
 
 def show_category(request, slug):
     """Shows all products in the given category"""
-    products = Product.objects.filter(category=slug)
-    context = {"products": products}
+    category = get_object_or_404(
+        Category.objects.prefetch_related("product_set"), slug=slug
+    )
+    categories = Category.objects.all()
+    products = category.product_set.filter(is_available=True)
+    context = {
+        "category": category,
+        "products": products,
+        "categories": categories,
+    }
     return render(request, "store/show-category.html", context=context)
 
 
@@ -72,3 +78,7 @@ def list_best_sellers(request):
 def list_new_arrivals(request):
     """Fetches the new arrivals from the database"""
     return render(request, "store/list-new-arrivals.html")
+
+
+def landing(request):
+    return render(request, "store/landing_page.html")

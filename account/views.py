@@ -1,5 +1,5 @@
-from django.contrib.auth import login,logout
-from django.shortcuts import render,redirect
+from django.contrib.auth import login, logout
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
@@ -9,39 +9,43 @@ from django.contrib.auth.forms import SetPasswordForm
 from account.forms import AccountChangeForm
 from account.models import User
 from config import settings
+
+
 # Create your views here.
 def user_signin(request):
-    return render(request,"account/signin.html")
+    return render(request, "account/signin.html")
+
 
 @login_required
 def password_update(request):
-    if request.method=='POST':
-        form = SetPasswordForm(user=request.user,data=request.POST)
+    if request.method == "POST":
+        form = SetPasswordForm(user=request.user, data=request.POST)
         if form.is_valid():
-            messages.success(request,"Password set successfully")
+            messages.success(request, "Password set successfully")
             email = request.user.email
             form.save()
             user = User.objects.get(email=email)
-            login(request,user)
+            login(request, user)
             return redirect("account:user-update")
         else:
-            messages.error(request,"Unable to set password")
+            messages.error(request, "Unable to set password")
     form = SetPasswordForm(user=request.user)
-    return render(request,"account/update.html",{"form":form})
+    return render(request, "account/update.html", {"form": form})
+
 
 @login_required
 def user_update(request):
-    if request.method=='POST':
-        form = AccountChangeForm(request.POST,instance=request.user)
+    if request.method == "POST":
+        form = AccountChangeForm(request.POST, instance=request.user)
         if form.is_valid():
-            messages.success(request,"Updated User Successfully")
+            messages.success(request, "Updated User Successfully")
             form.save()
             return redirect("store:explore")
         else:
-            messages.error(request,"Unable to update User")
+            messages.error(request, "Unable to update User")
     form = AccountChangeForm(instance=request.user)
-    return render(request,"account/update.html",{"form":form})
-        
+    return render(request, "account/update.html", {"form": form})
+
 
 @csrf_exempt
 def redirected(request):
@@ -51,11 +55,18 @@ def redirected(request):
             token, requests.Request(), settings.GOOGLE_OAUTH_CLIENT_ID
         )
     except Exception as e:
-        messages.error(request,"Unable to sign-in")
+        messages.error(request, "Unable to sign-in")
         print(e)
         return redirect("account:sign-up")
-    user,created = User.objects.get_or_create(email=data['email'],defaults={"full_name":data['name']})
-    login(request,user)
+    user, created = User.objects.get_or_create(
+        email=data["email"], defaults={"full_name": data["name"]}
+    )
+    login(request, user)
     if created:
         return redirect("account:password-update")
     return redirect("store:explore")
+
+
+def logout_user(request):
+    logout(request)
+    return redirect("account:sign-in")
