@@ -1,5 +1,6 @@
 """This file contains all view functions related to store"""
 from django.shortcuts import render, get_object_or_404
+from store.forms import RatingForm
 from store.models import Category, Product
 from django.db.models import Prefetch
 from django.core.paginator import Paginator
@@ -85,3 +86,7 @@ def list_new_arrivals(request):
 
 def landing(request):
     return render(request, "store/landing_page.html")
+
+def review_form(request):
+    form = RatingForm()
+    return render(request,"store/review-page.html",context={"form":form})

@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "debug_toolbar",
+    "ninja_extra",
+    "ninja_jwt",
     "crispy_forms",
     "crispy_tailwind",
     "compressor",

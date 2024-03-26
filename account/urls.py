@@ -7,5 +7,6 @@ urlpatterns = [
     path("update-password/", password_update, name="password-update"),
     path("update-user/", user_update, name="user-update"),
     path("redirect", redirected, name="google-redirect"),
+    path("myaccount/", my_account, name="my-account"),
     path("logout/", logout_user, name="sign-out"),
 ]

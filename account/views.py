@@ -67,6 +67,12 @@ def redirected(request):
     return redirect("store:explore")
 
 
+def my_account(request):
+    context = {}
+    return render(request, "account/my-account.html", context=context)
+
+
+
 def logout_user(request):
     logout(request)
-    return redirect("account:sign-in")
+    return redirect("account:sign-up")

@@ -8,6 +8,7 @@ from store.views import (
     list_all,
     list_best_sellers,
     list_new_arrivals,
+    review_form,
     show_category,
     show_product,
 )
@@ -23,4 +24,5 @@ urlpatterns = [
     path("product/<slug:slug>/", show_product, name="show-product"),
     path("best-sellers/", list_best_sellers, name="best-sellers"),
     path("new-arrivals/", list_new_arrivals, name="new-arrivals"),
+    path("review-form/", review_form, name="review-form")
 ]
