@@ -1,9 +1,12 @@
 """This file contains all view functions related to store"""
-from django.shortcuts import render, get_object_or_404
+
+from django.shortcuts import redirect, render, get_object_or_404
 from store.forms import RatingForm
-from store.models import Category, Product
+from store.models import Category, Product, Rating
 from django.db.models import Prefetch
 from django.core.paginator import Paginator
+from django.contrib.postgres.search import SearchVector
+
 # Create your views here.
 
 
@@ -36,7 +39,7 @@ def list_all(request):
     """
     # todo: add pagination
     products = Product.objects.filter(is_available=True)
-    paginator = Paginator(products,8)
+    paginator = Paginator(products, 8)
     page_number = request.GET.get("page")
     page = paginator.get_page(page_number)
     context = {"products": page}
@@ -46,7 +49,8 @@ def list_all(request):
 def show_product(request, slug):
     """Show a particular product"""
     product = get_object_or_404(Product, slug=slug)
-    context = {"product": product}
+    reviews = Rating.objects.filter(product=product)[:5]
+    context = {"product": product, "reviews": reviews}
     return render(request, "store/show-product.html", context=context)
 
 
@@ -87,6 +91,30 @@ def list_new_arrivals(request):
 def landing(request):
     return render(request, "store/landing_page.html")
 
-def review_form(request):
-    form = RatingForm()
-    return render(request,"store/review-page.html",context={"form":form})
+
+def review_form(request, id):
+    product = Product.objects.get(id=id)
+    if request.method == "POST":
+        data = request.POST.copy()
+        # data.update({"product__id"})
+        form = RatingForm(data=data)
+        if form.is_valid():
+            form.save()
+            return redirect("store:show-product", product.slug)
+        else:
+            return render(request, "store/review-page.html", context={"form": form})
+    form = RatingForm(data={"product": product, "user": request.user})
+    return render(
+        request, "store/review-page.html", context={"form": form, "product": product}
+    )
+
+
+def search_products(request):
+    query = request.GET.get("query")
+    search_result = Product.objects.annotate(
+        search=SearchVector("name", "description", "slug")
+    ).filter(search=query)
+    print(search_result)
+    return render(
+        request, "store/search-products.html", context={"products": search_result}
+    )

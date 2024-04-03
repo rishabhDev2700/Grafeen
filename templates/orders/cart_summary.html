@@ -1,0 +1,71 @@
+{% extends '../base.html' %}
+{% block title %}Summary{% endblock %}
+{% block content %}
+<div class="text-center mx-auto">
+    <h1 class="text-3xl my-4">My Cart</h1>
+    <div class="flex flex-col h-[70vh] overflow-y-auto border-2 border-black bg-white">
+        {% for item in cart %}
+        {%with product=item.product%}
+        <div class="border-2 border-black m-2 shadow-button lg:flex" data-index="{{product.id}}" id="{{product.id}}">
+            <img class="w-32 h-32 object-cover" src="{{product.cover.url}}">
+            <div class="flex items-start justify-between w-full px-8 py-4 font-urbanist">
+                <div class="text-4xl font-bold font-bebas">{{product.name}}</div>
+                <div class="text-xl">{{product.owner.full_name}}</div>
+                <div class="text-xl">{{product.description}}</div>
+                <div class="font-semibold text-5xl font-bebas w-72">Rs. {{product.price}}</div>
+            </div>
+            <button id="remove-button" data-index="{{product.id}}">
+                <img class="w-8 hover:scale-125 duration-300"
+                    src="https://cdn-icons-png.flaticon.com/512/1828/1828666.png" alt="close" />
+            </button>
+        </div>
+        {% endwith %}
+        {% endfor %}
+    </div>
+    <div id="cart-quantity" class="font-bebas text-2xl my-4">Total Items: {{subtotal}}</div>
+    <div class="text-5xl font-bold font-bebas text-gray-700">Total: <span id="subtotal"
+            class="underline text-gray-800">Rs. {{cart.get_subtotal}}</span>
+    </div>
+    <div class="p-8">
+        <a href="{% url 'orders:cart_clear' %}"
+            class="px-12 py-6 bg-orange-500 border-2 border-black shadow-button font-urbanist text-white font-bold text-lg hover:shadow-none duration-200">Cart
+            Clear</a>
+    </div>
+    {%if user.is_authenticated%}
+    <div class="my-12">
+        <a class="shadow-box border-2 border-black pay bg-green-600 hover:bg-green-800 hover:shadow-none text-white text-2xl py-4 px-12 m-8"
+            href="{%url 'orders:create_payment'%}">Pay</a>
+    </div>
+    {%endif%}
+</div>
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+    $(document).on("click", "#remove-button", function (e) {
+        e.preventDefault();
+        var product_id = $(this).data("index");
+        $.ajax({
+            type: "POST",
+            url: '{% url "orders:cart_delete" %}',
+            data: {
+                product_id: $(this).data("index"),
+                csrfmiddlewaretoken: "{{csrf_token}}",
+                action: "post",
+            },
+            success: function (json) {
+                $('#' + product_id).remove();
+                if (json.quantity == 0) {
+                    subtotal = 0
+                } else {
+                    subtotal = json.subtotal
+                }
+
+                $("#cart-quantity").replaceWith(json.quantity);
+                $("#subtotal").replaceWith(json.subtotal);
+            },
+            error: function (xhr, errmsg, err) { },
+        });
+    });
+</script>
+{% endblock %}

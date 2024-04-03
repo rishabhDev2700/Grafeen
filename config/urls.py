@@ -23,6 +23,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("account/", include("account.urls")),
     path("", include("store.urls")),
+    path("orders/", include("orders.urls")),
+    path("dashboard/", include("dashboard.urls")),
     path("api/", app.urls),
     path("__debug__/", include("debug_toolbar.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

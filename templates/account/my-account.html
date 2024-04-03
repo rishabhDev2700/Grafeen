@@ -1,5 +1,29 @@
 {% extends '../base.html' %}
+{% block title %}My Account{% endblock %}
 {% block sidebar %}
 {% endblock %}
 {% block content %}
+{% if user.is_seller %}
+<div class="m-8">
+
+    <a href="{% url 'dashboard:add-product' %}"
+        class="bg-white p-4 border-2 border-black shadow-button hover:bg-gray-400 duration-200">Add Product</a>
+    <a href="{% url 'dashboard:update-product' %}"
+        class="bg-white p-4 border-2 border-black shadow-button hover:bg-gray-400 duration-200">Update Product</a>
+    <a href="{% url 'dashboard:delete-product' %}"
+        class="bg-white p-4 border-2 border-black shadow-button hover:bg-gray-400 duration-200">Delete Product</a>
+    <a href="{% url 'dashboard:add-discount' %}"
+        class="bg-white p-4 border-2 border-black shadow-button hover:bg-gray-400 duration-200">Add Discount</a>
+    <a href="{% url 'dashboard:update-discount' %}"
+        class="bg-white p-4 border-2 border-black shadow-button hover:bg-gray-400 duration-200">Update Discount</a>
+    <a href="{% url 'dashboard:delete-discount' %}"
+        class="bg-white p-4 border-2 border-black shadow-button hover:bg-gray-400 duration-200">Delete Discount</a>
+</div>
+<div class="m-8">
+    <a href="{% url 'dashboard:my-products' %}"
+        class="bg-white p-4 border-2 border-black shadow-button hover:bg-gray-400 duration-200">My Products</a>
+    <a href="{% url 'dashboard:my-products' %}"
+        class="bg-white p-4 border-2 border-black shadow-button hover:bg-gray-400 duration-200">My Discounts</a>
+</div>
+{% endif %}
 {% endblock %}

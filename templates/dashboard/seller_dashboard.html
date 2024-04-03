@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+</head>
+
+<body>
+    <header>
+        Grafeen Seller's Dashboard
+    </header>
+    <nav class="fixed border-y-2 flex">
+        <a href="{% url 'dashboard:'}" class="border-2 shadow-button">Add Product</a>
+        <a href="{% url 'dashboard:'}" class="border-2 shadow-button">Update Product</a>
+        <a href="{% url 'dashboard:'}" class="border-2 shadow-button">Delete Product</a>
+        <a href="{% url 'dashboard:'}" class="border-2 shadow-button">Add Discount</a>
+        <a href="{% url 'dashboard:'}" class="border-2 shadow-button">Update Discount</a>
+        <a href="{% url 'dashboard:'}" class="border-2 shadow-button">Delete Discount</a>
+        <a href="{% url 'account:sign-out'}"
+            class="border-2 shadow-button bg-red-500 hover:bg-red-600 duration-200">Logout</a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+
+</html>

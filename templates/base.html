@@ -72,7 +72,11 @@
                 {% if user.is_authenticated %}
                 <li
                     class="p-4 border-t-2 lg:border-t-0 lg:border-l-2 border-black transition-all ease-in-out duration-500 bg-yellow-400 hover:bg-yellow-500">
-                    <a class="" href="{% url 'account:my-account'%}">My Account</a>
+                    <a class="" href="{% url 'account:my-account'%}">{{user}}</a>
+                </li>
+                <li
+                    class="p-4 border-t-2 lg:border-t-0 lg:border-l-2 border-black transition-all ease-in-out duration-500 bg-green-400 hover:bg-green-500">
+                    <a class="" href="{% url 'orders:summary'%}">Cart</a>
                 </li>
                 <li
                     class="p-4 border-t-2 lg:border-t-0 lg:border-x-2 border-black transition-all ease-in-out duration-500 bg-red-400 hover:bg-red-600">
@@ -84,15 +88,11 @@
                     <a class="" href="{% url 'account:sign-up'%}">Login</a>
                 </li>
                 {% endif %}
-                <!--   <li
-                    class="p-4 border-y-2 lg:border-y-0 lg:border-x-2 border-black transition-all ease-in-out duration-500 hover:bg-purple-400">
-                    <a class="">Register</a>
-                </li> -->
             </ul>
-            <form class="mx-auto lg:mx-4" role="search">
+            <form class="mx-auto lg:mx-4" role="search" action="{% url 'store:search' %}" method="get">
                 <input
                     class="border-2 border-black px-4 py-3 lg:px-3 lg:py-1 rounded-sm focus:outline-none focus:scale-105 ease-out duration-200"
-                    type="search" placeholder="Search" aria-label="Search">
+                    type="search" placeholder="Search" name="query" aria-label="Search">
                 <button
                     class="rounded-sm border-2 border-black bg-blue-500 px-4 py-3 lg:px-3 lg:py-1 text-white hover:-translate-x-1 hover:shadow-button ease-in-out duration-200"
                     type="submit">Search</button>
@@ -102,9 +102,50 @@
     <div class="relative h-fit md:flex">
         <aside class="hidden md:inline-block md:w-1/6 md:float-left bg-amber-300 border-r-2 border-black pt-4">
             {% block sidebar %}
+
+            <h2 class="text-center text-3xl font-black py-8">Categories</h2>
+            <div class="flex flex-col items-center">
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-1/">Category 1</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-2/">Category 2</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-3/">Category 3</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-4/">Category 4</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-5/">Category 5</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-6/">Category 6</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-7/">Category 7</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-8/">Category 8</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-9/">Category 9</a>
+
+                <a class="px-4 py-2 my-2 hover:text-amber-800" href="/category/category-10/">Category 10</a>
+
+
+            </div>
             {% endblock sidebar %}
         </aside>
-        <main class="bg-blue-300 md:w-5/6 p-2">
+        <main class="bg-blue-300 md:w-5/6 p-2 z-50">
+            {% if messages %}
+            <ul id="messages"
+                class="fixed flex justify-between items-center right-80 border-4 border-black shadow-3xl w-[22rem] bg-white p-4">
+                <div class="messages">
+                    {% for message in messages %}
+                    <li class="text-xl">
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </div>
+                <span id="message-close">
+                    <img class="w-4 ml-6" src="https://cdn-icons-png.flaticon.com/512/1828/1828666.png" alt="close" />
+                </span>
+            </ul>
+            {% endif %}
             {% block content %}
             {% endblock content %}
         </main>
@@ -129,9 +170,16 @@
             <div class="bg-purple-800 text-white w-52 mx-auto my-2 border-2 border-black">Built by Fuzzydevs</div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
-        integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    {% block script %}
+    <script type="text/javascript">
+        $("#message-close").on("click", function (e) {
+            $('#messages').hide(2);
+        })
+    </script>
+    {% endblock %}
 </body>
 
 </html>

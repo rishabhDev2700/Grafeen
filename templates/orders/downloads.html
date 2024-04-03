@@ -1,0 +1,16 @@
+{%extends '../base.html'%}
+{%block title%}
+Download
+{%endblock%}
+{%block content%}
+<div class="w-1/3 mx-auto">
+    <h1 class="text-3xl text-center">Download the Content</h1>
+    {% for item in products %}
+    <div class="my-4 mx-auto">
+        {{forloop.counter}}
+        <a href="{{item.product.cover.url}}" download
+            class="text-lg block bg-white p-2 border-2 border-black">{{item.product}}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

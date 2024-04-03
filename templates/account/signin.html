@@ -3,16 +3,18 @@
 {% block content %}
 <div class="h-[70vh] text-center mx-auto">
     <h1 class="text-3xl my-12">Sign in</h1>
-    <span>
-        <div id="g_id_onload" data-client_id="238921404982-rdkeieidqi6am1mjf7ua88ne2hi8do5i.apps.googleusercontent.com"
-            data-context="signin" data-ux_mode="redirect" data-login_uri="http://localhost:8000/account/redirect"
+    <span class="">
+        <div id="g_id_onload" data-client_id="238921404982-8412dutcu1i6cjnjf3qaj8f7fa847u9l.apps.googleusercontent.com"
+            data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:8000/account/redirect"
             data-auto_prompt="false">
         </div>
 
-        <div class="g_id_signin border-2 border-black w-52 mx-auto hover:shadow-button hover:scale-105 hover:-translate-x-1 duration-200 ease-linear"
+
+        <div class="g_id_signin lg:w-[14rem] border-2 border-black mx-auto hover:shadow-button hover:scale-105 hover:-translate-x-1 duration-200 ease-linear"
             data-type="standard" data-shape="rectangular" data-theme="outline" data-text="signin_with" data-size="large"
             data-logo_alignment="left">
         </div>
+
     </span>
 </div>
 <script src="https://accounts.google.com/gsi/client" async></script>

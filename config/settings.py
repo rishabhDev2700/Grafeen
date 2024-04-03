@@ -25,9 +25,14 @@ env = environ.Env(DEBUG=(bool, False))
 environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = env("SECRET_KEY")
 GOOGLE_OAUTH_CLIENT_ID = env("GOOGLE_OAUTH_CLIENT_ID")
+RAZORPAY_KEY = env("RAZORPAY_KEY")
+RAZORPAY_SECRET = env("RAZORPAY_SECRET")
+
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin-allow-popups"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(env("DEBUG"))
-
+CART_SESSION_ID="cart"
 ALLOWED_HOSTS = []
 INTERNAL_IPS = [
     # ...
@@ -45,6 +50,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.postgres",
     "debug_toolbar",
     "ninja_extra",
     "ninja_jwt",
@@ -54,6 +60,8 @@ INSTALLED_APPS = [
     "taggit",
     "account",
     "store",
+    "orders",
+    "dashboard",
 ]
 
 MIDDLEWARE = [
@@ -105,8 +113,12 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME":env("DATABASE_NAME"),
+        "USER":env("DB_USER"),
+        "PASSWORD":env("DB_PASSWORD"),
+        "HOST":env("HOST"),
+        "PORT":env("PORT"),
     }
 }
 FIXTURE_DIRS = [BASE_DIR / "fixtures"]

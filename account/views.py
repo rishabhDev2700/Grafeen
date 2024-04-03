@@ -55,7 +55,7 @@ def redirected(request):
             token, requests.Request(), settings.GOOGLE_OAUTH_CLIENT_ID
         )
     except Exception as e:
-        messages.error(request, "Unable to sign-in")
+        messages.error(request, f"Unable to sign-in {e}")
         print(e)
         return redirect("account:sign-up")
     user, created = User.objects.get_or_create(
@@ -64,6 +64,7 @@ def redirected(request):
     login(request, user)
     if created:
         return redirect("account:password-update")
+    messages.success(request,"Logged in successfully")
     return redirect("store:explore")
 
 
@@ -75,4 +76,5 @@ def my_account(request):
 
 def logout_user(request):
     logout(request)
+    messages.success(request, "User logged out successfully")
     return redirect("account:sign-up")

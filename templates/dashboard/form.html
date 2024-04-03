@@ -1,0 +1,18 @@
+{% extends '../base.html' %}
+{% load tailwind_filters %}
+{% block title %}Add new{% endblock %}
+{% block content %}
+<div class="text-center mx-auto">
+    <h1 class="text-3xl my-4">Add {{item}}</h1>
+    <div class="flex flex-col overflow-y-auto border-2 border-black bg-yellow-300">
+        <form class="lg:w-2/3 mx-auto" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form|crispy}}
+            <input class="shadow-button px-12 py-4 my-8 bg-blue-500 text-white hover:bg-blue-600" type="submit"
+                value="Add">
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

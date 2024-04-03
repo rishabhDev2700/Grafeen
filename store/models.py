@@ -1,9 +1,12 @@
 """This file contains the store models like product, category,etc. """
+
+import os
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.urls import reverse
 from taggit.managers import TaggableManager
 from account.models import User
+from uuid import uuid4
 
 
 # Create your models here.
@@ -31,6 +34,19 @@ class Category(models.Model):
         return reverse("store:show-category", args=[self.slug])
 
 
+def path_and_rename(instance, filename):
+    upload_to = "products/"
+    ext = filename.split(".")[-1]
+    # get filename
+    if instance.pk:
+        filename = "{}.{}".format(instance.pk, ext)
+    else:
+        # set filename as random string
+        filename = "{}.{}".format(uuid4().hex, ext)
+    # return the whole path to the file
+    return os.path.join(upload_to, filename)
+
+
 class Product(models.Model):
     """Product model"""
 
@@ -42,6 +58,7 @@ class Product(models.Model):
     price = models.PositiveIntegerField()
     date_added = models.DateField(auto_now=True)
     is_available = models.BooleanField(default=True)
+    cover = models.ImageField(upload_to=path_and_rename, null=True)
     tags = TaggableManager()
     objects = models.Manager()
 
@@ -62,10 +79,10 @@ class Product(models.Model):
 
 class Discount(models.Model):
     """Discount model for discounts"""
-    
+
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     percentage = models.FloatField()
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=20, unique=True)
     valid_till = models.DateField()
     objects = models.Manager()
 
@@ -86,13 +103,16 @@ class ProductImage(models.Model):
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True)
+    total = models.IntegerField()
+    created_on = models.DateTimeField(auto_now_add=True, null=True)
+    razorpay_order_id = models.CharField(max_length=22, unique=True, null=True)
     objects = models.Manager()
 
 
 class OrderProduct(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantities = models.PositiveSmallIntegerField()
+    # quantities = models.PositiveSmallIntegerField()
     price = models.PositiveIntegerField()
     objects = models.Manager()
 

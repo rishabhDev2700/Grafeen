@@ -1,11 +1,9 @@
 {% extends "../base.html" %}
-{% block sidebar %}
-{% endblock sidebar %}
+
 {% block content %}
 <div class="flex flex-wrap justify-start mx-auto mt-4 sm:grid-cols-2 md:grid-cols-3">
     <div class="bg-white border-2 border-black my-2 mx-4 shadow-3xl md:col-span-2 md:row-span-1">
-        <img src="https://images.pexels.com/photos/9977648/pexels-photo-9977648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            class="border-b-2 border-black md:h-[40vh]" alt="image" />
+        <img src="{{product.cover.url}}" class="border-b-2 border-black md:h-[40vh]" alt="image" />
         <div class="p-4 flex flex-col justify-between">
             <h2 class="text-3xl font-bebas">{{product.name}}</h2>
             <h3 class="text-xl font-light">{{product.owner}}</h3>
@@ -21,9 +19,9 @@
             <div class="text-2xl font-semibold">${{product.price}}</div>
             <div class="w-full h-0.5 my-4 bg-black"></div>
             <div class="my-2">
-                <a class="px-4 py-2 shadow-button hover:shadow-none hover:scale-75 duration-200 border-2 border-black bg-green-500 font-urbanist text-xl"
-                    href="">Add to
-                    cart</a>
+                <button id="add-button" value="{{product.id}}"
+                    class="px-4 py-2 shadow-button hover:shadow-none hover:scale-90 duration-200 border-2 border-black bg-green-500 font-urbanist text-xl">Add
+                    to Cart</button>
             </div>
         </div>
     </div>
@@ -35,26 +33,31 @@
     <!-- Reviews -->
     <div class="mx-4 my-4 border-t-2 border-black w-full md:mx-0 md:col-span-full">
         <h2 class="text-3xl my-4 font-bebas">Reviews</h2>
+        <div class="my-6">
+            <a href="{% url 'store:review-form' product.id %}"
+                class="px-6 py-3 bg-purple-500 m-4 border-2 border-black shadow-button">Give Review</a>
+        </div>
         <div class="p-2 flex flex-wrap">
+            <!-- review card -->
+            {% for review in reviews %}
             <div class="bg-white mb-8 p-4 shadow-3xl border-2 border-black md:w-96 md:mx-2">
                 <div class="flex justify-between items-start py-2  border-b-2 border-black mb-4">
-                    <h2 class="text-2xl font-bebas">Reviewer</h2>
+                    <h2 class="text-2xl font-bebas">{{review.user.full_name}}</h2>
                     <span class="flex items-end justify-center">
                         <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M23.632 9.201a.628.628 0 0 1-.22.678l-5.726 4.96 1.727 7.394a.606.606 0 0 1-.935.676l-6.503-3.953-6.503 3.953a.713.713 0 0 1-.374.112.57.57 0 0 1-.34-.109.629.629 0 0 1-.222-.679l1.729-7.393L.539 9.879A.607.607 0 0 1 .897 8.78l7.536-.635 2.965-7.083a.62.62 0 0 1 1.155.001l2.965 7.082 7.536.635a.63.63 0 0 1 .578.42z" />
                             <path fill="none" d="M0 0h24v24H0z" />
                         </svg>
-                        <span class="px-2">4</span>
+                        <span class="px-2">{{review.rating}}</span>
                     </span>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia earum iste minus
-                    reiciendis quis! Perferendis cupiditate inventore consequuntur assumenda ipsum explicabo
-                    saepe quos! Corrupti tempore corporis ducimus in incidunt?
+                    {{review.review}}
                 </p>
             </div>
-            <div class="bg-white mb-8 p-4 shadow-3xl border-2 border-black md:w-96 md:mx-2">
+            {% endfor %}
+            <!-- <div class="bg-white mb-8 p-4 shadow-3xl border-2 border-black md:w-96 md:mx-2">
                 <div class="flex justify-between items-start py-2  border-b-2 border-black mb-4">
                     <h2 class="text-2xl font-bebas">Reviewer</h2>
                     <span class="flex items-end justify-center">
@@ -71,9 +74,33 @@
                     reiciendis quis! Perferendis cupiditate inventore consequuntur assumenda ipsum explicabo
                     saepe quos! Corrupti tempore corporis ducimus in incidunt?
                 </p>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- content ends -->
 </div>
 {% endblock content %}
+
+{% block script %}
+<script type="text/javascript">
+
+    $(document).on('click', '#add-button', function (e) {
+        console.log("clicked on add-button");
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'orders:cart_add' %}",
+            data: {
+                product_id: $('#add-button').val(),
+                csrfmiddlewaretoken: "{{csrf_token}}",
+                action: 'post'
+            },
+            success: function (json) {
+                document.getElementById("cart-quantity").innerHTML = json.quantity
+                document.getElementById("subtotal").innerHTML = json.subtotal;
+            },
+            error: function (xhr, errmsg, err) { }
+        });
+    });
+</script>
+{% endblock %}

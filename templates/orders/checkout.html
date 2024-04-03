@@ -1,0 +1,39 @@
+{%extends '../base.html'%}
+{%block title%}
+Checkout
+{%endblock%}
+{%block content%}
+</style>
+</head>
+
+<body>
+    <div class="">
+        <h1 class="">Grafeen, the art store</h1>
+        <small class="">Complete the Payment</small>
+        <div class="">
+            <button class="px-8 py-12 border-2 border-black bg-green-500 text-white" id="pay-btn">Pay️
+            </button>
+        </div>
+    </div>
+</body>
+
+<!-- Razorpay's Javascript code. -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var options = {
+
+        key: "{{ razorpay_merchant_key }}",
+        amount: "{{ razorpay_amount }}",
+        currency: "{{ currency }}",
+        name: "Foodie's Stop",
+        order_id: "{{ razorpay_order_id }}",
+        callback_url: "{{ callback_url }}",
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById("pay-btn").onclick = function (e) {
+        rzp1.open();
+        e.preventDefault();
+    };
+
+</script>
+{%endblock%}

@@ -9,6 +9,7 @@
             "slug": "test-product-1",
             "category": 1,
             "price": 20,
+            "cover":"products/p1.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -23,6 +24,7 @@
             "slug": "test-product-2",
             "category": 2,
             "price": 25,
+            "cover":"products/p2.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -37,6 +39,7 @@
             "slug": "test-product-3",
             "category": 3,
             "price": 30,
+            "cover":"products/p3.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -51,6 +54,7 @@
             "slug": "test-product-4",
             "category": 4,
             "price": 35,
+            "cover":"products/p4.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -65,6 +69,7 @@
             "slug": "test-product-5",
             "category": 5,
             "price": 40,
+            "cover":"products/p5.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -79,6 +84,7 @@
             "slug": "test-product-6",
             "category": 6,
             "price": 45,
+            "cover":"products/p6.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -93,6 +99,7 @@
             "slug": "test-product-7",
             "category": 7,
             "price": 50,
+            "cover":"products/p7.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -107,6 +114,7 @@
             "slug": "test-product-8",
             "category": 8,
             "price": 55,
+            "cover":"products/p8.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -121,6 +129,7 @@
             "slug": "test-product-9",
             "category": 9,
             "price": 60,
+            "cover":"products/p9.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -135,6 +144,7 @@
             "slug": "test-product-10",
             "category": 10,
             "price": 65,
+            "cover":"products/p10.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -149,6 +159,7 @@
             "slug": "test-product-11",
             "category": 1,
             "price": 70,
+            "cover":"products/p11.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -163,6 +174,7 @@
             "slug": "test-product-12",
             "category": 2,
             "price": 75,
+            "cover":"products/p12.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -177,6 +189,7 @@
             "slug": "test-product-13",
             "category": 3,
             "price": 80,
+            "cover":"products/p13.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -191,6 +204,7 @@
             "slug": "test-product-14",
             "category": 4,
             "price": 85,
+            "cover":"products/p14.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -205,6 +219,7 @@
             "slug": "test-product-15",
             "category": 5,
             "price": 90,
+            "cover":"products/p15.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -219,6 +234,7 @@
             "slug": "test-product-16",
             "category": 6,
             "price": 95,
+            "cover":"products/p16.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -233,6 +249,7 @@
             "slug": "test-product-17",
             "category": 7,
             "price": 100,
+            "cover":"products/p17.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -247,6 +264,7 @@
             "slug": "test-product-18",
             "category": 8,
             "price": 105,
+            "cover":"products/p18.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -261,6 +279,7 @@
             "slug": "test-product-19",
             "category": 9,
             "price": 110,
+            "cover":"products/p19.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -275,6 +294,7 @@
             "slug": "test-product-20",
             "category": 1,
             "price": 115,
+            "cover":"products/p20.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -289,6 +309,7 @@
             "slug": "test-product-21",
             "category": 1,
             "price": 120,
+            "cover":"products/p21.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -303,6 +324,7 @@
             "slug": "test-product-22",
             "category": 2,
             "price": 125,
+            "cover":"products/p22.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -317,6 +339,7 @@
             "slug": "test-product-23",
             "category": 3,
             "price": 130,
+            "cover":"products/p23.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -331,6 +354,7 @@
             "slug": "test-product-24",
             "category": 4,
             "price": 135,
+            "cover":"products/p24.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -345,6 +369,7 @@
             "slug": "test-product-25",
             "category": 5,
             "price": 140,
+            "cover":"products/p25.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -359,6 +384,7 @@
             "slug": "test-product-26",
             "category": 6,
             "price": 145,
+            "cover":"products/p26.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -373,6 +399,7 @@
             "slug": "test-product-27",
             "category": 7,
             "price": 150,
+            "cover":"products/p27.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -387,6 +414,7 @@
             "slug": "test-product-28",
             "category": 8,
             "price": 155,
+            "cover":"products/p28.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -401,6 +429,7 @@
             "slug": "test-product-29",
             "category": 9,
             "price": 160,
+            "cover":"products/p29.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -415,6 +444,7 @@
             "slug": "test-product-30",
             "category": 2,
             "price": 165,
+            "cover":"products/p30.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -429,6 +459,7 @@
             "slug": "test-product-31",
             "category": 1,
             "price": 170,
+            "cover":"products/p31.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -443,6 +474,7 @@
             "slug": "test-product-32",
             "category": 2,
             "price": 175,
+            "cover":"products/p32.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -457,6 +489,7 @@
             "slug": "test-product-33",
             "category": 3,
             "price": 180,
+            "cover":"products/p33.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -471,6 +504,7 @@
             "slug": "test-product-34",
             "category": 4,
             "price": 185,
+            "cover":"products/p34.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -485,6 +519,7 @@
             "slug": "test-product-35",
             "category": 5,
             "price": 190,
+            "cover":"products/p35.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -499,6 +534,7 @@
             "slug": "test-product-36",
             "category": 6,
             "price": 195,
+            "cover":"products/p36.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -513,6 +549,7 @@
             "slug": "test-product-37",
             "category": 7,
             "price": 200,
+            "cover":"products/p37.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -527,6 +564,7 @@
             "slug": "test-product-38",
             "category": 8,
             "price": 205,
+            "cover":"products/p38.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -541,6 +579,7 @@
             "slug": "test-product-39",
             "category": 9,
             "price": 210,
+            "cover":"products/p39.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -555,6 +594,7 @@
             "slug": "test-product-40",
             "category": 4,
             "price": 215,
+            "cover":"products/p40.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -569,6 +609,7 @@
             "slug": "test-product-41",
             "category": 4,
             "price": 220,
+            "cover":"products/p41.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -583,6 +624,7 @@
             "slug": "test-product-42",
             "category": 4,
             "price": 225,
+            "cover":"products/p42.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -597,6 +639,7 @@
             "slug": "test-product-43",
             "category": 4,
             "price": 230,
+            "cover":"products/p43.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -611,6 +654,7 @@
             "slug": "test-product-44",
             "category": 4,
             "price": 235,
+            "cover":"products/p44.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -625,6 +669,7 @@
             "slug": "test-product-45",
             "category": 4,
             "price": 240,
+            "cover":"products/p45.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -639,6 +684,7 @@
             "slug": "test-product-46",
             "category": 4,
             "price": 245,
+            "cover":"products/p46.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -653,6 +699,7 @@
             "slug": "test-product-47",
             "category": 4,
             "price": 250,
+            "cover":"products/p47.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -667,6 +714,7 @@
             "slug": "test-product-48",
             "category": 4,
             "price": 255,
+            "cover":"products/p48.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -681,6 +729,7 @@
             "slug": "test-product-49",
             "category": 10,
             "price": 260,
+            "cover":"products/p49.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
@@ -695,6 +744,7 @@
             "slug": "test-product-50",
             "category": 10,
             "price": 265,
+            "cover":"products/p50.jpeg",
             "is_available": true,
             "date_added":"2024-2-23"
         }
